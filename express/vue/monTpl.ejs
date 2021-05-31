@@ -47,6 +47,18 @@
             padding: 2%;
             border-radius: 4px;
         }
+        .delete {
+            background-color: red;
+            border-radius: 5px;
+            border : red solid 1px;
+            padding : 2%
+        }
+        .update{
+            background-color: darkseagreen;
+            border: darkseagreen solid 1px;
+            border-radius: 5px;
+            padding : 2%
+        }
     </style>
 </head>
 <body>
@@ -60,7 +72,12 @@
     <div class="cont2">
     <% for(let i in tableau) { %>
         <div class="case bottom">
-            <div class="mini_case"> <%= tableau[i] %> </div>
+            <div class="mini_case">
+                <span> <%= tableau[i] %>   
+                    <button name="button" type="button" class="delete">X</button> 
+                </span>
+                <p> <button name="button" type="button" class="update"> Modifier </button> </p>
+            </div>
         </div>
         <% } %>
     </div>
