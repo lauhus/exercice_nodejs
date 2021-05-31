@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Document</title>
+    <style>
+        .nav {
+            height: 20%;
+            width: 98%;
+            display: flex;
+            justify-content: flex-end;
+            background-color: yellow;
+            padding : 1%;
+        }
+        .link {
+            margin-right: 3%;
+        }
+        .cont{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .cont2{
+            display: flex;
+            justify-content: space-around;
+        }
+        .case{
+            border : solid 2px black;
+            width: 25%;
+        }
+        .top {
+            margin-bottom: 0;
+            height: 5vh;
+            text-align: center;
+        }
+        .bottom {
+            margin-top: 0;
+            border-top: solid 0 black;
+            height: 60vh;
+        }
+        .mini_case {
+            margin : 2%;
+            background-color: darksalmon;
+            padding: 2%;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('navBar'); -%>
+    <div class="cont">
+        <p class="case top"> A faire </p> 
+        <p class="case top"> En cours </p> 
+        <p class="case top"> Terminé </p> 
+    </div>
+
+    <div class="cont2">
+    <% for(let i in tableau) { %>
+        <div class="case bottom">
+            <div class="mini_case"> <%= tableau[i] %> </div>
+        </div>
+        <% } %>
+    </div>
+
+        
+</body>
+</html>
